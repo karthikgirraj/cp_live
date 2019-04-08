@@ -1,12 +1,13 @@
 @extends('layouts.default')
 @section('content')
 
-    <div class="container">
-        <div class="row justify-content-md-center">
+    <div class="intro container h-100">
+        <div class="row h-100 justify-content-md-center align-items-center">
             <div class="col-sm-auto">
-                <div class="title">
-                    <h3 class="header"><img src="/img/curepeople_logo.png"/></h3>
-                    <p class="sub-header">preventive ayurveda</p>
+                <div class="title text-center">
+                    {{--<h3 class="header"><img src="/img/curepeople_logo.png"/></h3>--}}
+                    <h3 class="header"><img src="https://via.placeholder.com/289x111"/></h3>
+                    <p id="tag-line">preventive ayurveda</p>
                 </div>
 
                 <div id="introIndicators" class="carousel slide" data-ride="carousel">

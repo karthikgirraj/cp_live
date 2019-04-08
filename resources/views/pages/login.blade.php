@@ -1,9 +1,9 @@
 @extends('layouts.default')
 @section('content')
-    <div class="container login">
-        <div class="row justify-content-md-center">
+    <div class="container login h-100">
+        <div class="row h-100 justify-content-md-center align-items-center">
             <div class="wrapper">
-                <div class="title login-title">
+                <div class="title login-title text-center">
                     <h3 class="header">Login</h3>
                 </div>
                 <form name="login_form" id="login_form" action="/login" method="post" role="form">
@@ -37,7 +37,8 @@
                     </div>
                     <div class="login-btn-group d-flex flex-column w-100">
                         <button id="login-btn" type="submit" class="btn btn-secondary flat-btn">Login</button>
-                        <a href="{{ route('getForgot') }}" id="register-btn" class="btn btn-link">Forgot your password?</a>
+                        <a href="{{ route('getForgot') }}" id="register-btn" class="btn btn-link">Forgot your
+                            password?</a>
                     </div>
                 </form>
 

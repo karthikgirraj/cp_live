@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
-    <div class="container">
-        <div class="row justify-content-md-center">
+    <div class="container h-100">
+        <div class="row h-100 justify-content-md-center align-items-center">
             <div class="col-sm-auto">
                 <div class="title register-title">
                     <h3 class="header">Register</h3>
@@ -26,7 +26,7 @@
                                 <div class="w-50 m-auto">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text" id="cc-span">+91</span>
+                                            {{--<span class="input-group-text" id="cc-span">+91</span>--}}
                                         </div>
                                         <input value="+91" id="country_code" name="country_code" type="hidden"/>
                                         <input type="number" id="mobile" name="mobile" class="form-control input-decor"

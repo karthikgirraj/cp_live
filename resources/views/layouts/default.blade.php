@@ -4,13 +4,11 @@
     @include('includes.head')
 </head>
 <body>
-<div>
-    <div class="colorlib-loader"></div>
-    <div id="page">
-        @yield('content')
-        @include('includes.footer')
-    </div>
-    @include('includes.script')
+<div class="colorlib-loader"></div>
+<div id="page">
+    @yield('content')
+    @include('includes.footer')
 </div>
+@include('includes.script')
 </body>
 </html>
