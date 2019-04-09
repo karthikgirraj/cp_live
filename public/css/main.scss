@@ -11,7 +11,7 @@ html, body, #page {
   -webkit-appearance: none !important;
 }
 
-.input-decor, .input-decor-primary {
+.input-decor {
   border: 0;
   outline: 0;
   background: transparent;
@@ -20,6 +20,7 @@ html, body, #page {
 }
 
 .input-decor-primary {
+  @extend .input-decor;
   border-bottom: 1px solid black;
   border-bottom-width: 2px;
   border-radius: 0;
@@ -30,70 +31,100 @@ html, body, #page {
   color: red;
 }
 
-#login .form-group .card, #register .form-group .card {
-  width: 25rem;
-  margin-bottom: 10px;
-}
-#login .form-group .card .card-body, #register .form-group .card .card-body {
-  background: #f8f9fa;
-}
-#login .form-group .card .card-body .card-title, #register .form-group .card .card-body .card-title {
-  color: #545b62;
-  font-size: 14px;
-  letter-spacing: 1px;
+#login, #register {
+  .form-group {
+    .card {
+      width: 25rem;
+      margin-bottom: 10px;
+
+      .card-body {
+        background: #f8f9fa;
+
+        .card-title {
+          color: #545b62;
+          font-size: 14px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
 }
 
 /* Intro Page */
-#intro #tag-line {
-  font-style: italic;
-  color: #545b62;
-}
-#intro .carousel {
-  margin-top: 25vh;
-}
-#intro .carousel-indicators {
-  position: relative;
-  margin: 20px 0 20px 0;
-}
-#intro .carousel-indicators li {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #6c757d;
-}
-#intro .carousel-indicators .active {
-  background: #000;
-}
-#intro .default-btn-group .btn {
-  margin: 10px 0 10px 0;
-  border: none;
-}
-#intro .default-btn-group #fb-btn {
-  background: #3863a7;
-}
-#intro .default-btn-group #register-btn {
-  color: #545b62;
-}
-#intro #terms {
-  width: 90%;
-  font-size: 11px;
-  color: #6c757d;
+#intro {
+  #tag-line {
+    font-style: italic;
+    color: #545b62;
+  }
+
+  .carousel {
+    margin-top: 25vh;
+  }
+
+  .carousel-indicators {
+    position: relative;
+    margin: 20px 0 20px 0;
+  }
+
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #6c757d;
+  }
+
+  .carousel-indicators .active {
+    background: #000;
+  }
+
+  .default-btn-group {
+    .btn {
+      margin: 10px 0 10px 0;
+      border: none;
+    }
+
+    #fb-btn {
+      background: #3863a7;
+    }
+
+    #register-btn {
+      color: #545b62;
+    }
+  }
+
+  #terms {
+    width: 90%;
+    font-size: 11px;
+    color: #6c757d;
+  }
 }
 
 /* Register Page */
-#register .header {
-  margin-bottom: 20px;
-}
-#register #cc-span {
-  border: none;
-  background-color: #f8f9fa;
+
+#register {
+  .header {
+    margin-bottom: 20px;
+  }
+
+  #cc-span {
+    border: none;
+    background-color: #f8f9fa;
+  }
 }
 
 /* Login Page */
-#login .form-group {
-  margin: 15vh 0;
+#login {
+  .form-group {
+    margin: 15vh 0;
+
+    .card {
+      //width: 27rem;
+    }
+  }
 }
+
 /* Sidebar Nav */
+
 .sidebar .wrapper {
   display: block;
 }
@@ -126,6 +157,8 @@ html, body, #page {
   top: 10px;
   right: 10px;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -197,12 +230,12 @@ html, body, #page {
   color: #ffc107;
 }
 
-#sidebar ul li.active > a, a[aria-expanded=true] {
+#sidebar ul li.active > a, a[aria-expanded="true"] {
   color: #fff;
   background: #fde6bd;
 }
 
-a[data-toggle=collapse] {
+a[data-toggle="collapse"] {
   position: relative;
 }
 
@@ -211,8 +244,7 @@ a[data-toggle=collapse] {
   position: absolute;
   top: 50%;
   right: 20px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 #content {
@@ -233,12 +265,10 @@ a[data-toggle=collapse] {
 }
 
 .orrangecls {
-  color: #ffc107;
+  color: #ffc107
 }
 
 .whatareyou {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   margin: auto;
   position: relative;

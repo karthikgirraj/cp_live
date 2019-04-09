@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
 
-    <div class="intro container h-100">
+    <div class="container h-100" id="intro">
         <div class="row h-100 justify-content-md-center align-items-center">
             <div class="col-sm-auto">
                 <div class="title text-center">
@@ -30,8 +30,8 @@
                     </ol>
                 </div>
 
-                <div class="login-btn-group d-flex flex-column">
-                    <a href="{{ route('getLogin') }}" id="login-btn" type="button" class="btn btn-secondary flat-btn">
+                <div class="default-btn-group d-flex flex-column">
+                    <a href="{{ route('getLogin') }}" id="login-btn" type="button" class="btn btn-secondary default-btn flat-btn">
                         Login
                     </a>
                     <a id="fb-btn" href="#" type="button" class="btn btn-secondary flat-btn">Connect With Facebook</a>
@@ -40,8 +40,8 @@
                     </a>
                 </div>
 
-                <div class="terms d-flex justify-content-center text-center w-100">
-                    <p>By continuing you agree to our Terms & Conditions</p>
+                <div class="d-flex justify-content-center text-center w-100">
+                    <p id="terms">By continuing you agree to our Terms & Conditions</p>
                 </div>
             </div>
         </div>

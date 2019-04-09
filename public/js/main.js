@@ -44,6 +44,7 @@ function loginCallback(response) {
 }
 
 function smsLogin() {
+    // var countryCode = '+91';
     var countryCode = document.getElementById("country_code").value;
     var phoneNumber = document.getElementById("mobile").value;
     AccountKit.login(

@@ -1,15 +1,15 @@
 @extends('layouts.default')
 @section('content')
-    <div class="container h-100">
+    <div class="container h-100" id="register">
         <div class="row h-100 justify-content-md-center align-items-center">
             <div class="col-sm-auto">
-                <div class="title register-title">
-                    <h3 class="header">Register</h3>
+                <div class="title">
+                    <h3 class="header text-center">Register</h3>
                 </div>
 
                 <form name="registration_form" id="registration_form" action="/register" method="post" role="form">
 
-                    <div class="c-group">
+                    <div class="form-group">
                         @if ( Session::get('message') != '' )
                             <div class='alert alert-danger'>
                                 {{ Session::get('message') }}
@@ -24,12 +24,13 @@
                             <div class="card-body">
                                 <h6 class="card-title text-uppercase">Mobile Number</h6>
                                 <div class="w-50 m-auto">
-                                    <div class="input-group mb-3">
+                                    <div class="input-group justify-content-center">
                                         <div class="input-group-prepend">
                                             {{--<span class="input-group-text" id="cc-span">+91</span>--}}
                                         </div>
                                         <input value="+91" id="country_code" name="country_code" type="hidden"/>
-                                        <input type="number" id="mobile" name="mobile" class="form-control input-decor"
+                                        <input type="number" id="mobile" name="mobile"
+                                               class="form-control input-decor-primary w-100"
                                                placeholder="" maxlength="10" required
                                                oninput="this.value=this.value.slice(0,this.maxLength)"/>
                                     </div>
@@ -41,7 +42,7 @@
                             <div class="card-body">
                                 <h6 class="card-title text-uppercase">Email</h6>
                                 <div class="w-50 m-auto">
-                                    <input type="email" name="email" class="form-control input-decor"
+                                    <input type="email" name="email" class="form-control input-decor-primary"
                                            placeholder="" required/>
                                 </div>
                             </div>
@@ -51,7 +52,7 @@
                             <div class="card-body">
                                 <h6 class="card-title text-uppercase">Create Password</h6>
                                 <div class="w-50 m-auto">
-                                    <input type="password" name="password" class="form-control input-decor"
+                                    <input type="password" name="password" class="form-control input-decor-primary"
                                            placeholder="" required/>
                                 </div>
                             </div>
@@ -62,15 +63,15 @@
                                 <h6 class="card-title text-uppercase">Confirm Password</h6>
                                 <div class="w-50 m-auto">
                                     <input type="password" name="password_confirmation"
-                                           class="form-control input-decor"
+                                           class="form-control input-decor-primary"
                                            placeholder="" required/>
                                 </div>
                             </div>
                         </div>
 
                         <div class="login-btn-group d-flex flex-column">
-                            <button type="button" onclick="checkEmail();" id="login-btn"
-                                    class="btn btn-secondary flat-btn">Submit
+                            <button type="button" onclick="checkEmail();"
+                                    class="btn btn-secondary default-btn flat-btn">Submit
                             </button>
                         </div>
                     </div>
